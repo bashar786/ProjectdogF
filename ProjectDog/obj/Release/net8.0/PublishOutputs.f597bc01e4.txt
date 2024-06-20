@@ -1,0 +1,7 @@
+/Users/muneeb/Downloads/ProjectDog-master-2/ProjectDog/bin/Release/net8.0/publish/ProjectDog
+/Users/muneeb/Downloads/ProjectDog-master-2/ProjectDog/bin/Release/net8.0/publish/appsettings.Development.json
+/Users/muneeb/Downloads/ProjectDog-master-2/ProjectDog/bin/Release/net8.0/publish/appsettings.json
+/Users/muneeb/Downloads/ProjectDog-master-2/ProjectDog/bin/Release/net8.0/publish/ProjectDog.dll
+/Users/muneeb/Downloads/ProjectDog-master-2/ProjectDog/bin/Release/net8.0/publish/ProjectDog.deps.json
+/Users/muneeb/Downloads/ProjectDog-master-2/ProjectDog/bin/Release/net8.0/publish/ProjectDog.runtimeconfig.json
+/Users/muneeb/Downloads/ProjectDog-master-2/ProjectDog/bin/Release/net8.0/publish/ProjectDog.pdb

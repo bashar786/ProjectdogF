@@ -1,0 +1,249 @@
+﻿<style>
+    /* CSS for tabs */
+    .tab-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tab-buttons {
+        display: flex;
+    }
+
+        .tab-buttons button {
+            flex: 1;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+            .tab-buttons button.active {
+                background-color: #ddd;
+            }
+
+    .tab-content {
+        border: 1px solid #ccc;
+        padding: 20px;
+        background-color: #fff;
+    }
+
+    /* CSS for the card */
+    .info-box {
+        display: block !important;
+        background-color: #F9F9F9;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+        .info-box h4 {
+            margin-bottom: 15px;
+        }
+
+    .info-item {
+        margin-bottom: 10px;
+    }
+
+        .info-item span {
+            font-weight: bold;
+        }
+
+        .info-item a {
+           
+            text-decoration: none;
+            color: black;
+            font-weight:bold;
+        }
+
+            .info-item a:hover {
+                text-decoration: underline;
+                color: #007BFF;
+            }
+
+    .form-control {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: calc(100% - 16px);
+        box-sizing: border-box;
+    }
+
+    .freeAccount {
+        background: #f1f1f1;
+        width: 150px;
+        height: 50px;
+        top: 1748px;
+        left: 964px;
+        gap: 0px;
+        border-radius: 100px;
+        opacity: 0px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 27px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        margin-top: 15px;
+        margin-left:35%;
+    }
+
+    .freeAcc_button {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 27px;
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+    .al{
+        margin-left:-6px;
+        margin-top:-6px;
+    }
+
+    .noOrder{
+        text-align:center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size:large;
+        font-weight:300;
+    }
+    .tbl{
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+</style>
+
+<div class="tab-container container-fluid pt-4 px-5" style="margin-top: 3.5rem;">
+    <div class="tab-buttons">
+        <button class="active" onclick="openTab(event, 'tab1')">Select Project</button>
+        <button onclick="openTab(event, 'tab2')">Submit</button>
+        <button onclick="openTab(event, 'tab3')">Bid/Build</button>
+        <button onclick="openTab(event, 'tab4')">Archive</button>
+        <button onclick="openTab(event, 'tab5')">Project Contacts</button>
+        <button onclick="openTab(event, 'tab6')">Contact Utility</button>
+        <button onclick="openTab(event, 'tab7')">Document Manager</button>
+    </div>
+
+    <div id="tab1" class="tab-content" style="display: block;">
+        <div class="info-box">
+            <h4>Toolbox</h4>
+            <div class="info-item"><a href="#"><span><img src="/Images//PawPrintIcon32px.png" alt="paw" style="width:16px; height:16px;" /></span> Make this my home page after I Log-In</a></div>
+            <div class="info-item"><a href="#"><span><img src="/Images//PawPrintIcon32px.png" alt="paw" style="width:16px; height:16px;" /></span> Host New Project</a></div>
+            <div class="info-item"><a href="#"><span><img src="/Images//PawPrintIcon32px.png" alt="paw" style="width:16px; height:16px;" /></span> Delete</a></div>
+            <div class="info-item al">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="col-sm col-form-label"><span><img src="/Images//PawPrintIcon32px.png" alt="paw" style="width:16px; height:16px;" />Project details KW:</span></label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-row mb-3">                            
+                            <div class="col">
+                                <input type="text" placeholder="Key Word" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="info-item al">
+                <div class="row">
+                    <div class="col-md-2">
+                        <label class="col-sm col-form-label"><span><img src="/Images//PawPrintIcon32px.png" alt="paw" style="width:16px; height:16px;" />Limit Search by Date:</span></label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-row mb-3">
+                            <label class="col-sm-1 col-form-label">From:</label>
+                            <div class="col">
+                                <input type="date" class="form-control">
+                            </div>
+                            <label class="col-sm-1 col-form-label">To:</label>
+                            <div class="col">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="btn btn-default freeAccount freeAcc_button">Search</button>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <thead class="tbl">
+                        <tr>
+                            <th><input type="checkbox" /></th>
+                            <th>Bid Date</th>
+                            <th>Sub Bid Date</th>
+                            <th>Completion Date</th>
+                            <th>Est</th>
+                            <th>Project Title</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Code</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab2" class="tab-content" style="display: none;">
+        <!-- Empty content -->
+    </div>
+
+    <div id="tab3" class="tab-content" style="display: none;">
+        <!-- Empty content -->
+    </div>
+
+    <div id="tab4" class="tab-content" style="display: none;">
+        <!-- Empty content -->
+    </div>
+     <div id="tab5" class="tab-content" style="display: none;">
+        <!-- Empty content -->
+    </div>
+     <div id="tab6" class="tab-content" style="display: none;">
+        <!-- Empty content -->
+    </div>
+
+    <div id="tab7" class="tab-content" style="display: none;">
+        <div class="info-box">
+            <h4>Toolbox</h4>
+            <div class="info-item"><a href="#"><span><img src="/Images//PawPrintIcon32px.png" alt="paw" style="width:16px; height:16px;" /></span> Make this my home page after I Log-In</a></div>
+            <div class="info-item"><a href="#"  onclick="openTab(event, 'tab1')"><span><img src="/Images//PawPrintIcon32px.png" alt="paw" style="width:16px; height:16px;" /></span> Account Manager</a></div>
+
+        </div>
+
+        <div>
+            <p> If you are the document manager of a project, all your orders are listed here. Process orders by selecting each company name. Once processed the order is deleted, please print copies.</p>
+            <p class="noOrder">No Orders to Process</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tabbuttons;
+
+        // Hide all tab content
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove the active class from all buttons
+        tabbuttons = document.getElementsByClassName("tab-buttons")[0].getElementsByTagName("button");
+        for (i = 0; i < tabbuttons.length; i++) {
+            tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>

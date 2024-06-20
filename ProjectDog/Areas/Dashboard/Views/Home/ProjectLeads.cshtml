@@ -1,0 +1,297 @@
+﻿<style>
+    #project_leads_content .main_content .amount_optn {
+        display: flex;
+        align-items: center;
+    }
+
+        #project_leads_content .main_content .amount_optn .optn_left {
+            width: 100%;
+            max-width: 150px;
+        }
+
+        #project_leads_content .main_content .amount_optn p {
+            margin: 0;
+        }
+
+    #project_leads_content .search_chckbx .checkbx_heading h5 {
+        margin: 0;
+    }
+
+    #project_leads_content .search_chckbx .checkbx_heading {
+        padding: 20px 0px;
+    }
+
+    #project_leads_content{
+        padding-top: 40px;
+    }
+    #project_leads_content .search_chckbx .checkbox-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 786px;
+        column-gap: 16px;
+    }
+
+    #project_leads_content .search_chckbx .checkbox-item_all {
+        display: flex;
+        align-items: center;
+    }
+
+    #project_leads_content .search_chckbx .checkbox-item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 20%;
+    }
+
+    #project_leads_content .search_chckbx label {
+        margin: 0;
+        margin-left: 10px;
+        font-weight:500;
+    }
+
+    #project_leads_content .main_content {
+        border-radius: 10px;
+        border: 1px solid #EBEBEB;
+        background-color: #F9F9F9;
+        padding: 3rem;
+    }
+
+    #project_leads_content input, #project_leads_content select {
+        background-color: #F2F2F2 !important;
+        border: 0.5px solid #F2F2F2 !important;
+        height: calc(2.25rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        box-shadow: inset 0 0 0 transparent;
+    }
+
+    .btn-Search {
+        background-color: #01518F !important;
+        width: 141px !important;
+        height: 48px !important;
+        color: #fff !important;
+        border-radius: 100px;
+    }
+
+    .Box_Container {
+        background-color: #F9F9F9;
+        border-radius: 10px;
+        border: 1px solid #EBEBEB;
+    }
+</style>
+
+<div class="row mx-4 py-5 px-3 Box_Container" style="margin-top: 80px;">
+
+    <div class="col-md-8">
+        <form class="form-horizontal">
+
+            <div class="row">
+
+
+                <div class="col-md-6">
+
+                    <h6 class="mb-4"><b>Refine Search:</b></h6>
+
+
+                    <div class="form-row mb-3">
+                        <h6 class="col-sm-4 col-form-label">City</h6>
+                        <div class="col">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-3">
+                        <h6 class="col-sm-4 col-form-label">State</h6>
+                        <div class="col">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+
+
+                    <div class="form-row mb-3">
+                        <h6 class="col-sm-4 col-form-label">Project Details KW</h6>
+                        <div class="col">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    <h6 class="my-4"><b>Limit Search by Date:</b></h6>
+
+
+                    <div class="form-row mb-3">
+                        <h6 class="col-sm-4 col-form-label">From</h6>
+                        <div class="col">
+                            <input type="date" class="form-control">
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-row mb-3">
+                        <h6 class="col-sm-4 col-form-label">To</h6>
+                        <div class="col">
+                            <input type="date" class="form-control">
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group my-5">
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                            <h6 for="customCheckbox1" class="custom-control-label">Limit search to only projects added within the last 5 days.</h6>
+                        </div>
+
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox2">
+                            <h6 for="customCheckbox2" class="custom-control-label">Limit search to only projects with documents.</h6>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="form-row mb-3">
+                        <button class="btn-Search btn btn-default">Search</button>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
+
+
+
+<!-- Main Body -->
+@* <main role="main" class="">  *@
+    <div id="project_leads_content" style="display:none;">
+    <div class="row mx-4 py-5 px-3 Box_Container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="project_leads_tab">
+                    <div class="main_content">
+                        <div class="amount_optn">
+                            <div class="optn_left"><p>Amount :</p></div>
+                            <div class="optn_right">
+                                <select name="" id="" size="1">
+                                    <option selected="selected" value="0,9999999999999999">No Preference</option>
+                                    <option value="0,500000">$0 - $500,000</option>
+                                    <option value="500000,1500000">$500,000 - $1,500,000</option>
+                                    <option value="1500000,5000000">$1,500,000 - $5,000,000</option>
+                                    <option value="5000000,10000000">$5,000,000 - $10,000,000</option>
+                                    <option value="10000000,9999999999999999">Greater than $10,000,000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="search_chckbx">
+                            <div class="checkbx_heading">
+                                <h5>Refine your search by choosing only the divisions that you are interested in!</h5>
+                            </div>
+                            <div class="chckbx_area">
+                                <div class="checkbox-item_all">
+                                    <input id="searchAll" type="checkbox" name="searchAll">
+                                    <label for="searchAll">Search All Projects</label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <div class="checkbox-item">
+                                        <input id="division1" type="checkbox" name="division1">
+                                        <label for="division1">Division 1</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division2" type="checkbox" name="division2">
+                                        <label for="division2">Division 2</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division3" type="checkbox" name="division3">
+                                        <label for="division3">Division 3</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division4" type="checkbox" name="division4">
+                                        <label for="division4">Division 4</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division5" type="checkbox" name="division5">
+                                        <label for="division5">Division 5</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division6" type="checkbox" name="division6">
+                                        <label for="division6">Division 6</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division7" type="checkbox" name="division7">
+                                        <label for="division7">Division 7</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division8" type="checkbox" name="division8">
+                                        <label for="division8">Division 8</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division9" type="checkbox" name="division9">
+                                        <label for="division9">Division 9</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division10" type="checkbox" name="division10">
+                                        <label for="division10">Division 10</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division11" type="checkbox" name="division11">
+                                        <label for="division11">Division 11</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division12" type="checkbox" name="division12">
+                                        <label for="division12">Division 12</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division13" type="checkbox" name="division13">
+                                        <label for="division13">Division 13</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division14" type="checkbox" name="division14">
+                                        <label for="division14">Division 14</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division15" type="checkbox" name="division15">
+                                        <label for="division15">Division 15</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division16" type="checkbox" name="division16">
+                                        <label for="division16">Division 16</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="division17" type="checkbox" name="division17">
+                                        <label for="division17">Division 17</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input id="generalContractor" type="checkbox" name="generalContractor">
+                                        <label for="generalContractor">General Contractor</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+@* </main> *@

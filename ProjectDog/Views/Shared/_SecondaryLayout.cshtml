@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/SecondaryStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+  
+     <div class="row" style="justify-content: center;text-align: center;align-items: center;">
+        <div class="col-md-9">
+            <div style="text-align: left;">          
+                <a href="/Dashboard/"><img class="animation__shake" src="~/Images/LOGO.png" width="120"></a>
+            </div>
+        </div>
+
+        <div class="col-md-3 proImg" style="text-align: right;">
+            @* <img src="~/Images/Group.png" width="40" height="40"> *@
+        </div>
+        <div class="offset-0"></div>
+    </div>
+
+        @RenderBody()
+   
+    </div>
+
+
+    <footer class="container-fluid">
+            <div class="row footer-bottom" style="justify-content: center;">
+                <div class="col-md-5 col-sm-6 text-sm-left text-center" style="display: flex; justify-content: space-between; align-items: center;font-size: 13px; ">
+                    <span class="copy-right-text">Copyright © 2024 All Rights Reserved</span>
+                    <span class="copy-right-text">|</span>
+                    <span class="copy-right-text">Privacy Policy</span>
+                    <span class="copy-right-text">|</span>
+                    <span class="copy-right-text">ADA Policy</span>
+                    <span class="copy-right-text">|</span>
+                    <span class="copy-right-text">Copyright Policy</span>
+                </div>
+                <div b-gq3ilgsxj4="" class="col-md-4" style="text-align: right;">
+                    <span b-gq3ilgsxj4="" class="developed-by">Developed By <span b-gq3ilgsxj4="" class="highlight">WBN Marketing of Florida</span></span>
+                </div>
+            </div>
+
+        </footer>
+
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+            var $this = $(this),
+                label = $this.prev('label');
+
+            if (e.type === 'keyup') {
+                if ($this.val() === '') {
+                    label.removeClass('active highlight');
+                } else {
+                    label.addClass('active highlight');
+                }
+            } else if (e.type === 'blur') {
+                if ($this.val() === '') {
+                    label.removeClass('active highlight');
+                } else {
+                    label.removeClass('highlight');
+                }
+            } else if (e.type === 'focus') {
+
+                if ($this.val() === '') {
+                    label.removeClass('highlight');
+                }
+                else if ($this.val() !== '') {
+                    label.addClass('highlight');
+                }
+            }
+
+        });
+
+        $('.tab a').on('click', function (e) {
+
+            e.preventDefault();
+
+            $(this).parent().addClass('active');
+            $(this).parent().siblings().removeClass('active');
+
+            target = $(this).attr('href');
+
+            $('.tab-content > div').not(target).hide();
+
+            $(target).fadeIn(600);
+
+        });
+    </script>
+
+</body>
+
+</html>

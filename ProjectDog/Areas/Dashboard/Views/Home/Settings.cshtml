@@ -1,0 +1,323 @@
+﻿<style>
+
+    input[type=radio]#Default {
+        appearance: none;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background-clip: content-box;
+        border: 1px solid #01518F;
+        background-color: #01518F;
+    }
+
+    input[type="radio"]#Default:checked {
+        background-color: #01518F;
+        padding: 2px;
+        border: 1px solid #01518F;
+    }
+
+
+    input[type=radio]#Violet {
+        appearance: none;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background-clip: content-box;
+        border: 1px solid #C900FB;
+        background-color: #C900FB;
+    }
+
+    input[type="radio"]#Violet:checked {
+        background-color: #C900FB;
+        padding: 2px;
+        border: 1px solid #C900FB;
+    }
+
+    input[type=radio]#Red {
+        appearance: none;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background-clip: content-box;
+        border: 1px solid #DE0000;
+        background-color: #DE0000;
+    }
+
+    input[type="radio"]#Red:checked {
+        background-color: #DE0000;
+        padding: 2px;
+        border: 1px solid #DE0000;
+    }
+
+    input[type=radio]#Green {
+        appearance: none;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background-clip: content-box;
+        border: 1px solid #03A200;
+        background-color: #03A200;
+    }
+
+    input[type="radio"]#Green:checked {
+        background-color: #03A200;
+        padding: 2px;
+        border: 1px solid #03A200;
+    }
+
+    input[type=radio]#Pink {
+        appearance: none;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background-clip: content-box;
+        border: 1px solid #FF7EEA;
+        background-color: #FF7EEA;
+    }
+
+    input[type="radio"]#Pink:checked {
+        background-color: #FF7EEA;
+        padding: 2px;
+        border: 1px solid #FF7EEA;
+    }
+
+
+
+    input[type=radio]#Grey {
+        appearance: none;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        background-clip: content-box;
+        border: 1px solid #5F5F5F;
+        background-color: #5F5F5F;
+    }
+
+    input[type="radio"]#Grey:checked {
+        background-color: #5F5F5F;
+        padding: 2px;
+        border: 1px solid #5F5F5F;
+    }
+
+
+    .radio-text-Center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-control {
+        background-color: #F2F2F2 !important;
+        border: 0.5px solid #F2F2F2 !important;
+    }
+
+    .contanier {
+        border-radius: 10px !important;
+        border: 1px solid #EBEBEB !important;
+    }
+    .setting_page_form .form-control:hover{
+        background-color: #FFF !important;
+    }
+</style>
+
+<div class="container-fluid pt-4 px-5" style="margin-top: 2.5rem;">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="contanier px-4 py-5" style="background-color:#F9F9F9!important">
+
+                <div class="row">
+
+                    <div class="col-md-2">
+                        <h4 class="mb-3">Subscriptions</h4>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h5 class="mb-3">Project leads</h5>
+                        <h6>$1,895 Annually</h6>
+                        <h6>$1,100 Bi-annually</h6>
+                        <h6>$600 Quarterly</h6>
+
+                    </div>
+
+                    <div class="col-md-2">
+                        <h5 class="mb-3">Project pack </h5>
+                        <h6>6 Pack <span class="ml-3">$168.00</span></h6>
+                        <h6>6 Pack <span class="ml-3">$ $648.00</span></h6>
+
+
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-2"></div>
+
+                    <div class="col-md-2">
+
+                        <h6 class="mt-3">End Date: xx/xx/xxxx</h6>
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <h6 class="mt-3">Balance: xx</h6>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="contanier pt-4 px-4 my-4" style="background-color:#F9F9F9!important">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h5 class="mb-3">Site Color Palette </h5>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-between">
+                        <div class="form-group radio-text-Center">
+                            <label for="Default">Default</label>
+                            <input type="radio" id="Default">
+                        </div>
+
+                        @* <div class="form-group radio-text-Center">
+                            <label for="Violet">Violet</label>
+                            <input type="radio" id="Violet">
+                        </div> *@
+
+                        <div class="form-group radio-text-Center">
+                            <label for="Red">Red</label>
+                            <input type="radio" id="Red">
+                        </div>
+
+                        @* <div class="form-group radio-text-Center">
+                            <label for="Green">Green</label>
+                            <input type="radio" id="Green">
+                        </div> *@
+                        @* <div class="form-group radio-text-Center">
+                            <label for="Pink">Pink</label>
+                            <input type="radio" id="Pink">
+                        </div> *@
+                        <div class="form-group radio-text-Center">
+                            <label for="Grey">Grey</label>
+                            <input type="radio" id="Grey">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="contanier pt-4 px-4 my-4" style="background-color:#F9F9F9!important">
+                <form class="form-horizontal setting_page_form">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">First Name</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">Last Name</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">Company</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">Address</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">State</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">Zip Code</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">Country * USA</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">Phone</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">Cell</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">Email (username)</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">Password</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="form-row mb-3">
+                                <label class="col-sm-3 col-form-label">Signature</label>
+                                <div class="col">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

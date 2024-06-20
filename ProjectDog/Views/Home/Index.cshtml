@@ -1,0 +1,884 @@
+﻿<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .dd-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+        padding-left: 150px
+    }
+
+    .container-fluid {
+        width: 1550px;
+    }
+
+    .testimonial-container {
+        position: relative;
+    }
+
+    .testimonial-cards {
+        display: flex;
+        width: 1070px;
+    }
+
+    .cardTestimonial {
+        min-width: 300px; /* Adjust based on card width */
+        flex: 0 0 auto;
+    }
+
+    .scroll-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .scroll-btn-left {
+        left: 10px;
+    }
+
+    .scroll-btn-right {
+        right: 10px;
+    }
+
+    .small-price {
+        font-size: 0.7em; /* Adjust the size as needed */
+    }
+
+    .cardTestimonial {
+        margin: 0px; /* Adjust the padding value as needed */
+    }
+
+    .solution {
+        margin-left: 118px;
+    }
+
+    ul.custom-bullets {
+        list-style: none; /* Remove default bullets */
+        padding-left: 2rem; /* Add space for custom bullets */
+    }
+
+        ul.custom-bullets li {
+            position: relative;
+            padding-left: 2rem; /* Space for the bullet image */
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.1em;
+            text-align: left;
+            color: #343434;
+        }
+
+            ul.custom-bullets li::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1.5rem; /* Size of the bullet image */
+                height: 1.5rem; /* Size of the bullet image */
+                background-image: url('/Images/PawPrintIcon32px.png'); /* Replace with your image URL */
+                background-size: cover; /* Ensure image covers the space */
+                background-repeat: no-repeat; /* Prevent repetition of the image */
+            }
+
+    .custom-bullets {
+        list-style: none; /* Remove default bullets */
+        padding-left: 1.5rem; /* Add space for custom bullets */
+    }
+
+        .custom-bullets li {
+            position: relative;
+            padding-left: 2rem; /* Space for the bullet image */
+            margin-bottom: 0.5rem; /* Add space between list items */
+        }
+
+            .custom-bullets li::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 1.5rem; /* Size of the bullet image */
+                height: 1.5rem; /* Size of the bullet image */
+                background-image: url('https://via.placeholder.com/24'); /* Replace with your image URL */
+                background-size: cover; /* Ensure image covers the space */
+                background-repeat: no-repeat; /* Prevent repetition of the image */
+            }
+
+    .list-container {
+        max-height: 500px; /* Set a maximum height for scrolling */
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .auto-Image {
+        width: 95%;
+    }
+    .services-section_img img{
+        width: 100%;
+        min-width: 120px;
+    }
+    .Projectdog_welcome_img{
+        width: 100%;
+        border-radius: 5px;
+    }
+    .services-section_c_img{
+        column-gap: 20px;
+        align-items: center;
+    }
+    .services-section_sec{
+        width: 100%;
+        margin: 0 auto;
+        background-color: #E7F5FF;
+    }
+    .who_we_main_content{
+        display: grid;
+        align-items: center;
+        align-content: center;
+        height: 100%;
+    }
+    .testimonials-section_main{
+        width: 100%;
+    }
+    .how_it_content{
+            display: grid;
+            align-content: center;
+            align-items: center;
+            height: 100%;
+    }
+</style>
+
+
+<div class="hero">
+
+    <div id="home-section" class="container-fluid Hero-Container">
+        <div class="row">
+
+            <div class="col-md-6 col-12">
+                <h2 class="py-2 ml-2 Hero_Top_Heading">Welcome To ProjectDog</h2>
+                <h6 class="py-2 ml-3 ml-sm-0 ml-md-0 ml-lg-3 Hero_Top_paragraph">Your central location for all online procurement needs.</h6>
+                <p class="col--lg-8 col-sm-12 col-md-12 Hero_Top_Sub_paragraph">Prepare for the future, automate all RFS, RFQ, SOQ, RFP, General/Sub and Trade Contractor bids.</p>
+                <p class="py-2 col-lg-10 col-sm-12 col-md-12 Hero_Top_Sub_paragraph">City, Town, Agency and Department level yearly Municipal Subscriptions Available to handle all your online Bidding and Hosting needs. <a href="mailto:ejc@projectdog.com">Email us</a> for more information.</p>
+
+                <button class="btn btn-default HeroButton ml-lg-3 ml-sm-0 ml-md-0">Create Your FREE Account</button>
+
+            </div>
+
+
+
+            <div class="col-md-6 col-12">
+
+                <div class="position-relative">
+                    <img src="~/Images/Projectdog_welcome.jpg" class="Projectdog_welcome_img" />
+                    @* <img src="~/Images/Wireframes - Various Cards,Dashboard.png" class="position-absolute" /> *@
+                    @* <img src="~/Images/AutomationGraphic.png" class="position-absolute" /> *@
+                </div>
+
+            </div>
+            <div class="offset-1"></div>
+        </div>
+    </div>
+
+    <div class="row flex-column pb-3 ml-4">
+        <h2 class="ml-3 mb-4 text-center mt-4 mt-lg-0 mt-sm-4 mt-md-4 Testimonial_heading">Time-Sensitive Solutions, Seamlessly Delivered</h2>
+        <div class="row">
+            @* <div class="offset-3"></div> *@
+            @*  <div class="col-md-6">
+            <p class="text-center Testimonial_sub_heading">There are 3 kinds of user logins: Standard, Project lead and Guest.</p>
+            </div> *@
+
+            <div style="margin: 0 auto;">
+                <ul class="custom-bullets">
+                    <li>Automate your RFS, RFQ, SOQ, RFP, General/Sub and Trade Contractor bids!</li>
+                    <li>City, Town, Agency and Department level annual municipal subscriptions available!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="services-section_sec">
+        <div id="services-section" class="container-fluid">
+            <div class="row py-5 row-border">
+                <div class="col-md-4">
+                    <div class="row services-section_c_img">
+                        <div class="services-section_img">
+                            <img src="~/Images/Group 2.png" width="70" height="70" />
+                        </div>
+                        <div class="">
+                            <h5 class="H5Heading">
+                                Project Hosting
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row services-section_c_img">
+                        <div class="services-section_img">
+                            <img src="~/Images/Group 11.png" width="70" height="70" />
+                        </div>
+                        <div class="">
+                            <h5 class="H5Heading">
+                                Electronic Bidding
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row services-section_c_img">
+                        <div class="services-section_img">
+                            <img src="~/Images/Group 22.png" width="70" height="70" />
+                        </div>
+                        <div class="">
+                            <h5 class="H5Heading">
+                                Project Leads
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3 text-center" style="display: none;">
+                    <button class="btn btn-default freeAccount freeAcc_button">Create Your Free Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid Hero-third-Container">
+        <br /> <br />
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="how_it_content">
+                    <h1 class="H2Heading mb-4">HOW IT WORKS</h1>
+                    <div class="row">
+                        <div class="">
+                            <p class="PragraphHeading">There are 3 kinds of user logins: Standard, Project lead and Guest.</p>
+                        </div>
+
+                        <div class="offset- .5">
+                            <ul class="custom-bullets">
+                                <li>Create your FREE Account and receive your log in credentials</li>
+                                <li>Once a user status is assigned, the user can purchase single projects or project packs to be able to see the project details.</li>
+                                <li>Free projects that do not require a fee to view are always identified by a paw print!</li>
+                                <li>Buying single projects or project packs for projects that require a fee to view gets you the details of those projects.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4 mb-lg-0 mb-sm-4 mb-md-4">
+
+                <img src="~/Images/AutomationGraphic1.png" class="auto-Image" />
+
+                @* <img src="~/Images/AutomationGraphic.png" class="position-absolute" /> *@
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="about-section" class="container-fluid Hero-third-Container">
+        <br> <br>
+        <div class="row">
+
+            <div class="col-md-6 mb-4 mb-lg-0 mb-sm-4 mb-md-4">
+
+                <img src="~/Images/Wireframes - Browser Mockup-1.png" class="Placeholder-Image" />
+
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="who_we_main_content">
+                    <h2 class="H2Heading mb-4">Who We Are?</h2>
+
+                    <p class="PragraphHeading">Quisque at urna tempor, varius ex id, porttitor diam. Vestibulum id porta libero. Fusce ipsum justo, auctor at rutrum ultrices, ornare non magna. Vivamus consequat imperdiet fringilla. Suspendisse sed mauris facilisis, mollis lorem nec, vehicula arcu. Nullam elementum condimentum est in aliquet.</p>
+                    <p class="PragraphHeading">Fusce elementum lorem vitae lectus ultricies, sed ultricies purus vestibulum. Sed sagittis sed risus sed accumsan. Duis viverra mauris ut mattis fringilla. </p>
+
+                    <button class="btn btn-default GetInTouchButton">Get In Touch</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="features-section" class="Hero-Four-Container" style="display: none;">
+
+        <div class="row container-fluid flex-column pb-3 ml-4 mt-4 mt-lg-0">
+            <h1 class="ml-lg-3 ml-sm-0 ml-md-0 mb-4 Features_Heading">Our Features</h1>
+            <p class="col-md-6 ml-lg-1 ml-sm-0 ml-md-0 Features_Sub_Heading">Nullam consectetur luctus neque, sed condimentum turpis ornare sit amet. Nam fringilla a massa vel tristique.</p>
+
+        </div>
+
+        <div class="row container-fluid">
+
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <img src="~/Images/Group 8.png" width="70" height="70" />
+                    </div>
+                    <div class="col-md-12">
+                        <h5 class="mb-2 Features_Text">
+                            Bids Automation
+                        </h5>
+                        <p class="Features_Sub_Text">Cras id enim at ante viverra porttitor. Sed pellentesque facilisis felis vitae bibendum.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <img src="~/Images/Group 5.png" width="70" height="70" />
+                    </div>
+                    <div class="col-md-12">
+                        <h5 class="mb-2 Features_Text">
+                            Municipal Subscription</h2>
+                            <p class="Features_Sub_Text">Phasellus sagittis hendrerit tortor id pellentesque. Sed aliquam nibh eu hendrerit egestas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <img src="~/Images/Group 7.png" width="70" height="70" />
+                    </div>
+                    <div class="col-md-12">
+                        <h5 class="mb-2 Features_Text">
+                            Project Hosting</h2>
+                            <p class="Features_Sub_Text">Tincidunt, mi nisl lacinia purus, consequat iaculis felis lorem id nunc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pricing-section" class="Hero-six-Container" style="display: none;">
+
+        <div class="pb-3 Hero-six-Wrapper">
+            <h1 class="ml-3 mb-4 text-center Choose_Plan_Heading">Choose Your Plan</h1>
+            <p class="text-center Choose_Plan_Sub_Heading col-5">Captivating Hearts, One Smile at a Time: Our Passion for Customer Love Shines Brightly in Every Sparkling Encounter</p>
+
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <div class="Card-price box1">
+                        <h3 class="text-center pt-4 pb-4 price-title price-heading">
+                            1-Project Single Purchase
+                        </h3>
+                        <div class="Price">
+                            @* <h1 class="price-text price_text_heading">$<span class="ml-1">600</span></h1> *@
+                            <h1 class="price-text price_text_heading"><span class="ml-1 small-price">$59.99</span></h1>
+
+                        </div>
+                        <div class="Price-list py-4 text-center">
+                            <p class="mb-3 Price-list_text">Three Projects</p>
+                            <p class="mb-3 Price-list_text">One active user</p>
+                            <p class="mb-3 Price-list_text">50 GB Storage</p>
+
+                        </div>
+                        <div class="card-price-footer">
+                            <a href="@Url.Action("PaymentInformation","Home")"><h5 class="ChoosePlan_text">Choose Plan <img class="ml-3" src="~/Images/VectorArrow.png"></h5></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4  mb-4">
+                    <div class="Card-price box2">
+                        <h3 class="text-center pt-4 pb-4 price-title  price-heading">
+                            3-project Pack
+                        </h3>
+                        <div class="Price" style="background-color:#01518F;">
+                            @* <h1 class="price-text price_text_heading">$<span class="ml-1">947.50</span></h1> *@
+                            <h1 class="price-text price_text_heading"><span class="ml-1 small-price">$168.00</span></h1>
+
+                        </div>
+                        <div class="Price-list py-4 text-center">
+
+                            <p class="mb-3 Price-list_text">20 Projects</p>
+                            <p class="mb-3 Price-list_text">10 active user</p>
+                            <p class="mb-3 Price-list_text">250 GB Storage</p>
+                            <p class="mb-3 Price-list_text">24/7 Support</p>
+
+
+                        </div>
+                        <div class="card-price-footer">
+                            <a href="@Url.Action("PaymentInformation","Home")"><h5 class="ChoosePlan_text">Choose Plan <img class="ml-3" src="~/Images/VectorArrow.png"></h5></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4  mb-4">
+                    <div class="Card-price box3">
+                        <h3 class="text-center pt-4 pb-4 price-title price-heading">
+                            6-project Pack
+                        </h3>
+                        <div class="Price" style="background-color:#343434">
+                            @* <h1 class="price-text price_text_heading">$<span class="ml-1">1,895.00</span></h1> *@
+                            <h1 class="price-text price_text_heading"><span class="ml-1 small-price">$318.00</span></h1>
+                        </div>
+                        <div class="Price-list py-4 text-center">
+
+
+                            <p class="mb-3 Price-list_text">Unlimited Projects</p>
+                            <p class="mb-3 Price-list_text">100 active user</p>
+                            <p class="mb-3 Price-list_text">1 TB Storage</p>
+                            <p class="mb-3 Price-list_text">24/7 Support</p>
+                            <p class="mb-3 Price-list_text">Team Collaboration</p>
+                            <p class="mb-3 Price-list_text">Company Dashboard</p>
+
+
+                        </div>
+                        <div class="card-price-footer">
+                            <a href="@Url.Action("PaymentInformation","Home")"><h5 class="ChoosePlan_text">Choose Plan <img class="ml-3" src="~/Images/VectorArrow.png"></h5></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <br />
+            </div>
+
+        </div>
+
+        <div class="col-md-12 mb-3 text-center">
+            <button class="btn btn-default freeAccount freeAcc_button">Create Your Free Account</button>
+        </div>
+    </div>
+
+    <div class="row flex-column pb-3" style="margin-top: 100px;">
+        <h3 class="mb-4 text-center mt-4 mt-lg-0 mt-sm-4 mt-md-4 Testimonial_heading">Are you getting left behind with cost saving technology?</h3>
+        <div class="row">
+            <div class="offset-3"></div>
+            <div class="col-md-6">
+                <p class="text-center Testimonial_sub_heading">Join our Electronic Bidding Clients!</p>
+            </div>
+
+            <div class="offset-3" style="margin: 0 auto;">
+                <div class="dd-container" style="padding-left: 0;">
+                    <div class="list-container">
+                        <ul class="custom-bullets">
+                            <li>Academy of the Pacific Rim Charter School</li>
+                            <li>Activitas Inc.</li>
+                            <li>Acton Housing Authority</li>
+                            <li>Acton, Town of</li>
+                            <li>AECOM</li>
+                            <li>Agawam Housing Authority</li>
+                            <li>AI3</li>
+                            <li>Allen & Major Associates</li>
+                            <li>Amesbury Housing Authority</li>
+                            <li>Amesbury, City of</li>
+                            <li>Andover Housing Authority</li>
+                            <li>Andrew M Brockway & Associates</li>
+                            <li>Antonio Gomes Architect</li>
+                            <li>Arcadis</li>
+                            <li>Architectural Consulting Services</li>
+                            <li>Architectural Solutions</li>
+                            <li>Arlington Housing Authority</li>
+                            <li>Arrowstreet  Architects</li>
+                            <li>Athol Housing Authority</li>
+                            <li>Attleboro Housing Authority</li>
+                            <li>Auburn Housing Authority</li>
+                            <li>Avon Housing Authority</li>
+                            <li>Ayer, Town of</li>
+                            <li>B Goba & Associates</li>
+                            <li>B S C Group</li>
+                            <li>Barnstable Housing Authority</li>
+                            <li>Barre Housing Authority</li>
+                            <li>Beacon Architectural Associates</li>
+                            <li>Bedford Housing Authority</li>
+                            <li>Belchertown Housing Authority</li>
+                            <li>Bellingham Housing Authority</li>
+                            <li>Berlin Boylston Regional School District</li>
+                            <li>Beverly Housing Authority</li>
+                            <li>Beverly Public Schools</li>
+                            <li>Beverly, City of</li>
+                            <li>Biddeford Municipal Airport</li>
+                            <li>Billerica Housing Authority</li>
+                            <li>Blackstone Block Architects, Inc.</li>
+                            <li>Blackstone Housing Authority</li>
+                            <li>Boston Housing Authority/West Broadway Homes LP</li>
+                            <li>Bourne Housing Authority</li>
+                            <li>Bourne Public Schools</li>
+                            <li>Bourne, Town of</li>
+                            <li>Boxford, Town of</li>
+                            <li>Braintree Housing Authority</li>
+                            <li>Brewster, Town of</li>
+                            <li>Bridgewater Housing Authority</li>
+                            <li>Brimfield Housing Authority</li>
+                            <li>Bristol Housing Authority</li>
+                            <li>Brookfield, Town of</li>
+                            <li>Brookline, Town of</li>
+                            <li>Brown Lindquist Fenuccio & Raber Architects</li>
+                            <li>Burlington Housing Authority</li>
+                            <li>C A Crowley Engineering</li>
+                            <li>C B I Consulting</li>
+                            <li>C D M Smith</li>
+                            <li>C D R Maguire</li>
+                            <li>C S S Architects Inc</li>
+                            <li>Canton Housing Authority</li>
+                            <li>Canton Public Schools</li>
+                            <li>Canton, Town of</li>
+                            <li>Caolo & Bieniek</li>
+                            <li>Cape Cod Children's Place</li>
+                            <li>Carlisle Public Schools</li>
+                            <li>Carver Housing Authority</li>
+                            <li>Chariho Regional School District</li>
+                            <li>Chelmsford Housing Authority</li>
+                            <li>Cheshire Water Pollution Control Authority</li>
+                            <li>Chestnut Hill, MA</li>
+                            <li>Chicopee Housing Authority</li>
+                            <li>Chicopee, City of</li>
+                            <li>City Point Partners</li>
+                            <li>Clearwater Architects</li>
+                            <li>Clinton Housing Authority</li>
+                            <li>Clinton Public Schools</li>
+                            <li>Clinton, Town of</li>
+                            <li>Cohasset Housing Authority</li>
+                            <li>Colliers International</li>
+                            <li>Compass Project Management</li>
+                            <li>Comprehensive Environmental</li>
+                            <li>Concord Housing Authority</li>
+                            <li>Construction Monitoring Services</li>
+                            <li>Context Studios</li>
+                            <li>Courtstreet Architects</li>
+                            <li>Crossfield Engineering</li>
+                            <li>Danvers Housing Authority</li>
+                            <li>Dartmouth Public Schools</li>
+                            <li>Dartmouth, Town of</li>
+                            <li>David L King Architects</li>
+                            <li>Davis Square Architects</li>
+                            <li>DeCastro Nelson Associates</li>
+                            <li>Dedham Housing Authority</li>
+                            <li>Deerfield, Town of</li>
+                            <li>Dennis Housing Authority</li>
+                            <li>Dennis, Town of</li>
+                            <li>Derby Square Architects</li>
+                            <li>Design Technique Inc.</li>
+                            <li>Desman Design Management</li>
+                            <li>Dewberry</li>
+                            <li>Dixon Salo Architects</li>
+                            <li>Domenic Quaraglia Engineering, Inc</li>
+                            <li>Dore & Whittier, Inc.</li>
+                            <li>Dover Sherborn Public Schools</li>
+                            <li>Dover-Sherborn Regional School District</li>
+                            <li>Dracut Housing Authority</li>
+                            <li>Dudley Housing Authority</li>
+                            <li>Duxbury Housing Authority</li>
+                            <li>E G A Architects</li>
+                            <li>East Bridgewater Housing Authority</li>
+                            <li>East Longmeadow Housing Authority</li>
+                            <li>Eastham Public Library</li>
+                            <li>Eastham, Town of</li>
+                            <li>Easthampton Housing Authority</li>
+                            <li>Edgartown Public Library</li>
+                            <li>Edgartown, Town of</li>
+                            <li>Environmental Partners Group</li>
+                            <li>Essex Housing Authority</li>
+                            <li>Everett Housing Authority</li>
+                            <li>Excel Academy Charter School</li>
+                            <li>Fairhaven Housing Authority</li>
+                            <li>Fairhaven, Town of</li>
+                            <li>Fall River Housing Authority</li>
+                            <li>Falmouth Housing Authority</li>
+                            <li>Fennick McCredie Architecture</li>
+                            <li>Finegold Alexander & Associates</li>
+                            <li>First Baptist Church of Pittsfield</li>
+                            <li>Fitchburg Housing Authority</li>
+                            <li>Flansburgh Architects</li>
+                            <li>Foxborough Housing Authority</li>
+                            <li>Foxborough, Town of</li>
+                            <li>Framingham Housing Authority</li>
+                            <li>Framingham Public Library</li>
+                            <li>Framingham, Town of</li>
+                            <li>Franklin Housing Authority</li>
+                            <li>Franklin, Town of</li>
+                            <li>Freetown-Lakeville Regional School District</li>
+                            <li>G C E Architecture</li>
+                            <li>G C G Associates</li>
+                            <li>Gale Associates</li>
+                            <li>Garcia Galuska & Desousa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="help-section" class="container-fluid Hero-Eight-Container" style="display: none;">
+
+            <div class="card form_card">
+                <div class="card-body">
+
+                    <div class="ml-3 mb-4">
+                        <h1 class="card-title Contact_Form_heading">Start Your Free Trial Today</h1>
+                        <p class="card-text Contact_Form_sub_heading">Send your info to us</p>
+
+                    </div>
+                    <form>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <textarea class="form-control" style="height: 200px!important;">Message</textarea>
+                            </div>
+
+                            <div class="col-md-12 mb-3 text-center">
+                                <button class="btn btn-default ContactUsButton button_text">Contact Us</button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div id="contact-section" class=" Hero-nine-Container" style="display: none;">
+            <div class="container-fluid ">
+                <div class="row solution">
+                    <div class="col-md-9">
+
+                        <span class="mb-3 mt-lg-0 mt-sm-5 mt-md-5 mt-5 GetInTouch_heading">Didn’t Find</span>
+                        <span class="mb-3 mt-lg-0 mt-sm-5 mt-md-5 mt-5 GetInTouch_heading">Any Solutions?</span>
+                        <p class="mb-3 GetInTouch_Sub_heading col-8">Fusce hendrerit sem sit amet eros auctor, vitae vehicula purus pretium.</p>
+                        <p class="mb-3 GetInTouch_Paragraph"><img src="~/Images/Frame 7.png" /> Essential discovery questions.</p>
+                        <p class="mb-3 GetInTouch_Paragraph"><img src="~/Images/Frame 7.png" /> Keep the flow of conversation going.</p>
+
+                        <button class="btn btn-default GetInTouchButton">Get In Touch</button>
+                    </div>
+
+                    <div class="col-md-3" style="display: flex;justify-content: end;align-items: end;">
+
+                        <h1 class="mb-3 Service_Heading">24/7 SERVICE</h1>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <div class="testimonials-section_main">
+    
+        <div id="testimonials-section" class="container-fluid Hero-Five-Container">
+
+            <div class="row flex-column pb-3 ml-4">
+                <h1 class="ml-3 mb-4 text-center mt-4 mt-lg-0 mt-sm-4 mt-md-4 Testimonial_heading">HAPPY CLIENTS</h1>
+                <div class="row">
+                    <div class="offset-3"></div>
+                    @* <div class="col-md-6">
+                        <p class="text-center Testimonial_sub_heading">Captivating Hearts, One Smile at a Time: Our Passion for Customer Love Shines Brightly in Every Sparkling Encounter</p>
+                    </div> *@
+
+                    <div class="offset-3"></div>
+                </div>
+            </div>
+
+            @* <div class="row mb-5">
+
+            <div class="col-md-6">
+            <div class="cardTestimonial p-2">
+            <div class="card-body">
+            <p class="card-text Testimonial_Card_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames odio venenatis feugiat blandit magna donec pellentesque. Semper vulputate nisl, feugiat sagittis, malesuada hendrerit. Mi habitasse vitae et elit adipiscing a ut cras sodales. Malesuada amet a nisi, id. Adipiscing dui orci tempor consectetur quis non risus.</p>
+            <h3 class="card-link mt-5 Testimonial_Card_Sub_text">Katie</h3>
+            <h6 class="Testimonial_Card_Client_text">Client</h6>
+            </div>
+            </div>
+            </div>
+
+
+            <div class="col-md-6">
+            <div class="cardTestimonial p-2">
+            <div class="card-body">
+            <p class="card-text Testimonial_Card_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames odio venenatis feugiat blandit magna donec pellentesque. Semper vulputate nisl, feugiat sagittis, malesuada hendrerit. Mi habitasse vitae et elit adipiscing a ut cras sodales. Malesuada amet a nisi, id. Adipiscing dui orci tempor consectetur quis non risus.</p>
+            <h3 class="card-link mt-5 Testimonial_Card_Sub_text">Katie</h3>
+            <h6 class="Testimonial_Card_Client_text">Client</h6>
+            </div>
+            </div>
+            </div>
+
+
+
+
+            </div> *@
+
+            <div class="testimonial-container mt-5">
+                @* <button class="scroll-btn scroll-btn-left">&lt;</button> *@
+                <div class="testimonial-cards">
+                    
+                    <div class="col-md-4 cardTestimonial p-2" style="">
+                        <div class="card-body">
+                            <div class="test_content">
+                                <p class="card-text Testimonial_Card_text">Projectdog has distinguished itself by providing services that have ease of use and reliability that is crucial in the fast pace of the construction process. I would recommend Projectdog to any construction professional or firm looking for an innovative and dedicated team member to help manage the document control on a project.</p>
+                            </div>
+                            <div class="test_heading">
+                                <h3 class="card-link mt-5 Testimonial_Card_Sub_text">Tony Sievers</h3>
+                                <h6 class="Testimonial_Card_Client_text">Diversified Project Management</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 cardTestimonial p-2" >
+                        <div class="card-body">
+                            <div class="test_content">
+                                <p class="card-text Testimonial_Card_text">To date, our experiences with Projectdog have been excellent and your firm has performed in a highly capable and thorough manner in navigating us through the electronic bidding process. Your tutorials and instructions for registering a project are straight forward, document review, distribution and the posting of bid results are accurate and timely and we have always found your staff to be responsive and quick-acting to our requests and/or questions.</p>
+                            </div>
+                            <div class="test_heading">    
+                                <h3 class="card-link mt-5 Testimonial_Card_Sub_text">Leon J. Pernice</h3>
+                                <h6 class="Testimonial_Card_Client_text"> Associates Inc</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 cardTestimonial p-2" style="">
+                        <div class="card-body">
+                            <div class="test_content">
+                                <p class="card-text Testimonial_Card_text">1 have been working with Projectdog for about a year now and I can't thank you enough for providing an easy to use, efficient and economical procurement program for the City of Amesbury to showcase its projects. The amount of work that you have saved me is hard to believe. I am now able to concentrate on other tasks, instead of spending time creating spreadsheets, taking vendor information and mailing out bid documents, addenda and bid results.</p>
+                            </div>
+                            <div class="test_heading">    
+                                <h3 class="card-link mt-5 Testimonial_Card_Sub_text">Laurie Pierce</h3>
+                                <h6 class="Testimonial_Card_Client_text"> Department of Public Works, City of Amesbury</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 cardTestimonial p-2" style="">
+                        <div class="card-body">
+                            <div class="test_content">
+                                <p class="card-text Testimonial_Card_text">Utilizing the services of Projectdog significantly reduces the risk of human error in the bidding process of modernization projects. It allows the agency the opportunity to be a part of the process without the hassle of fielding phone calls from contractors and vendors. I would highly recommend your company to anyone that is looking for professional, courteous service that is supported by a very user friendly website / user interface.</p>
+                            </div>
+                            <div class="test_heading">
+                                <h3 class="card-link mt-5 Testimonial_Card_Sub_text">Brian L. Oblon</h3>
+                                <h6 class="Testimonial_Card_Client_text">ARCADIS U.S., Inc</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 cardTestimonial p-2" >
+                        <div class="card-body">
+                            <div class="test_content">
+                                <p class="card-text Testimonial_Card_text">P3, Project Planning Professionals is pleased to offer our highest recommendation and compliments to Projectdog. We have been so delighted with the level of service your company seamlessly delivers, never once has P3 considered another firm to handle our Bid document hosting services.</p>
+                            </div>
+                            <div class="test_heading">
+                                <h3 class="card-link mt-5 Testimonial_Card_Sub_text">Robert Todisco</h3>
+                                <h6 class="Testimonial_Card_Client_text">P3, Project Planning Professionals</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 cardTestimonial p-2" style="">
+                        <div class="card-body" >
+                            <div class="test_content">
+                                <p class="card-text Testimonial_Card_text">I am writing this reference letter to recommend projectdog.com for you online bidding needs.  I recently used their online bidding service and must say that it is one of the most users friendly I have encountered.  I would highly recommend the projectdog.com online bidding service.</p>
+                            </div>
+                            <div class="test_heading">
+                                <h3 class="card-link mt-5 Testimonial_Card_Sub_text">Makell K. Crosby</h3>
+                                <h6 class="Testimonial_Card_Client_text">Collins Electric</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more cards as needed -->
+                </div>
+                @* <button class="scroll-btn scroll-btn-right">&gt;</button> *@
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+@* <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script> *@
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    let currentIndex = 0;
+    const testimonials = document.querySelectorAll('.cardTestimonial');
+    const testimonialsCount = testimonials.length;
+
+    function showTestimonials(startIndex) {
+        // Hide all testimonials
+        testimonials.forEach(testimonial => {
+            testimonial.style.display = 'none';
+        });
+
+        // Determine end index
+        let endIndex = startIndex + 3;
+        if (endIndex > testimonialsCount) {
+            endIndex = testimonialsCount;
+        }
+
+        // Show testimonials within range
+        for (let i = startIndex; i < endIndex; i++) {
+            testimonials[i].style.display = 'block';
+        }
+    }
+
+    function nextTestimonials() {
+        currentIndex += 3;
+        if (currentIndex >= testimonialsCount) {
+            currentIndex = 0;
+        }
+        showTestimonials(currentIndex);
+    }
+
+    function prevTestimonials() {
+        currentIndex -= 2;
+        if (currentIndex < 0) {
+            currentIndex = testimonialsCount - 2;
+        }
+        showTestimonials(currentIndex);
+    }
+
+    // Auto-play testimonials
+    setInterval(nextTestimonials, 5000); // Change 5000 to adjust the interval (in milliseconds)
+
+    // Initial display
+    showTestimonials(currentIndex);
+</script>

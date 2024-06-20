@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            /* background-color: #f8f9fa; */
+        }
+        .con {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 1.75rem;
+            margin-top: 2rem;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+
+<body>
+    <div class="container mt-5">
+        <!-- Header -->
+        <div class="text-center mb-4">
+            <h1>Privacy Policy</h1>
+            <p>Last Updated: <span id="last-updated-date">31/5/2024</span></p>
+        </div>
+
+        <!-- Introduction -->
+        <div class="mb-5">
+            <h2>Information Collection and Use </h2>
+            <p>You may provide basic contact information which we may use to grant you access to certain sections of the site. We will not sell, share or rent this information.</p>
+        </div>
+
+        <!-- How We Use Collected Information -->
+        <div class="mb-5">
+            <h2>Registration </h2>
+            <p>In order to use certain sections of this website, you must create an account. During registration, you will be required to give your contact information (such as name and email address). This information is used to contact you about the services on our site for which you have expressed interest. It is optional for you to provide other information.</p>
+        </div>
+
+        <!-- How We Protect Your Information -->
+        <div class="mb-5">
+            <h2>Security </h2>
+            <p>This website takes precautions to protect our users’ information. This website does not collect sensitive information such as credit card numbers or social security numbers. Even so, we protect the information collected both online and offline. If you have any questions about the security at our website, please email us.</p>
+        </div>
+        <div class="mb-5">
+            <h2>Cookies</h2>
+            <p>A cookie is a piece of data stored on your hard drive containing information about you. For instance, by setting a cookie on our site, you would not have to log in a password more than once, thereby saving time while on our site. We set a cookie that is persistent, and will automatically log you in when you return to the site. If you reject the cookie, you may still use our site. The only drawback to this is that your usability may be limited in some areas of our site.</p>
+        </div>
+         <div class="mb-5">
+            <h2>Sharing</h2>
+            <p>We do not sell, rent or trade your personal information to others outside of Projectdog, Inc.</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Set current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Optional: Set last updated date
+        // document.getElementById('last-updated-date').textContent = 'Your Last Updated Date';
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

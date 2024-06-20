@@ -1,0 +1,23 @@
+body{
+    overflow: hidden;
+}
+.setting_page_form .form-control:hover{
+    background-color: #FFF !important;
+    border: unset;
+    outline-style: auto;
+    outline-color: #01528f;
+    transition: .3s;
+}
+.setting_page_form .form-control{
+    transition: .3s;
+}
+.sidebar .nav-sidebar > .nav-item.menu-open > .nav-link, .sidebar .nav-sidebar > .nav-item > .nav-link, .sidebar .nav-sidebar > .nav-item > .nav-link{
+    color: #000 !important;
+}
+.sidebar .nav-sidebar > .nav-item.menu-open > .nav-link, .sidebar .nav-sidebar > .nav-item > .nav-link, .sidebar .nav-sidebar > .nav-item > .nav-link:hover i, .sidebar .nav-sidebar > .nav-item.menu-open > .nav-link, .sidebar .nav-sidebar > .nav-item > .nav-link, .sidebar .nav-sidebar > .nav-item > .nav-link:hover .dash_nav_link{
+    color: #01528f !important;
+}
+
+.sidebar .nav-sidebar > .nav-item.menu-open > .nav-link, .sidebar .nav-sidebar > .nav-item > .nav-link, .sidebar .nav-sidebar > .nav-item > .nav-link, .dash_nav_link, .sidebar .nav-sidebar > .nav-item.menu-open > .nav-link, .sidebar .nav-sidebar > .nav-item > .nav-link, .sidebar .nav-sidebar > .nav-item > .nav-link i{
+    color: #000 !important; 
+}

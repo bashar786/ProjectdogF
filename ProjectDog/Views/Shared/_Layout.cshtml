@@ -1,0 +1,214 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <link rel="stylesheet" href="~/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <title>Project Dog</title>
+</head>
+<body>
+
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 p-2">
+
+                    <span class="mx-md-2 d-inline-block"></span>
+                    <a href="#" class="text-white"><span class="icon-phone"></span> <span class="d-none d-md-inline-block">978-499-9014</span></a>
+                    <div class="float-right">
+                        <h6 class="d-none d-md-inline-block mr-2 text-white">Follow Us:</h6>
+                        @* <a href="#" class="text-white"><span class="icon-twitter"></span></a> *@
+                        <span class="mx-md-2 d-inline-block"></span>
+                        <a href="#" class="text-white"><span class="icon-facebook"></span></a>
+                        <span class="mx-md-2 d-inline-block"></span>
+                        <a href="#" class="text-white"><span class="icon-youtube"></span></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+        <div class="container">
+            <div class="row align-items-center position-relative">
+
+
+                <div class="site-logo">
+                    <a class="navbar-brand" href="/home">
+                        <img src="~/Images/ProjectDog_LOGO.png" width="150" height="100" alt="">
+                    </a>
+                </div>
+
+                <div class="col-12">
+                    <nav class="site-navigation text-right ml-auto " role="navigation">
+
+                        <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                            <li><a href="@Url.Action("Video","Home")" class="nav-link">Video Education</a></li>
+                            @* <li><a href="#pricing-section" class="nav-link">Pricing</a></li> *@
+                            @* <li><a href="#testimonials-section" class="nav-link">Testimonial</a>< /li> *@
+                            <li><a href="@Url.Action("ContactUs","Home")" class="nav-link">Contact Us</a></li>
+
+                            <li><a href="@Url.Action("Login","Home")" class="nav-link">| &nbsp; <span class="icon-user"></span></a></li>
+                            @* <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li> *@
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+            </div>
+        </div>
+
+    </header>
+
+    @RenderBody()
+
+    <footer class="footer-section">
+        <div class="footer-top">
+            <div class="container-fluid" style="width: 1550px;">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget company-intro-widget">
+                            <a href="/home" class="site-logo"><img src="~/Images/ProjectDog_LOGO.png" width="130" alt="logo"></a>
+                            <p class="footer_paragraph">Stress-free from start to finish with complimentary, no hassle services and a lifetime warranty on all of our jewelry that’s our promise.</p>
+                        </div>
+                    </div><!-- widget end -->
+                    <div class="col-lg-2 col-md-6 col-sm-6 pl-5">
+                        <div class="widget course-links-widget">
+                            <h5 class="widget-title"><b class="Footer_Heading">Explore</b></h5>
+                            <ul class="courses-link-list">
+                                @* <li><a href="#features-section" class="Footer_list_text">Features</a></li>
+                                <li><a href="#pricing-section" class="Footer_list_text">Pricing</a></li> *@
+                                <li><a href="/home/Video" class="Footer_list_text">Video Education</a></li>
+                                <li><a href="@Url.Action("ContactUs","Home")" class="Footer_list_text">Contact Us</a></li>
+                                <li><a href="/home/Login" class="Footer_list_text">Sign In</a></li>
+                                <li><a href="/home/login" class="Footer_list_text">Sign Up</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- widget end -->
+                    <div class="col-lg-3 col-md-6 col-sm-6 pl-5">
+                        <div class="widget latest-news-widget">
+                            <h5 class="widget-title"><b class="Footer_Heading">Contact</b></h5>
+                            <ul class="courses-link-list">
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-phone mr-2"></i><b class="Footer_list_text"><a style="display: inline-block;" href="tel:978-499-9014"><span b-zgvmjv5iy1="" s="" class="Footer_Sub_list_text" style="margin: 0; padding: 0; left: 0; top: 0;">Call us</span></a></b>                                        
+                                    </a>
+                                </li>
+
+                                @* <li>
+                                    <a href="#">
+                                        <i class="fas fa-envelope mr-2"></i><b class="Footer_list_text">Mail us at:</b>
+                                        <span class="Footer_Sub_list_text">help@support.com</span>
+                                    </a>
+                                </li> *@
+
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-map-marker  mr-2"></i><b class="Footer_list_text">Visit us at:</b>
+                                        <span class="col-10 Footer_Sub_list_text" style="left: 10px!important;">
+                                            Projectdog, Inc 18 Graf Road, Suite 8 Newburyport, MA 01950
+                                            <br />
+                                            M-F  9:00AM - 5:00PM
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div><!-- widget end -->
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="widget newsletter-widget">
+                            <h5 class="widget-title"><b class="Footer_Heading">Subscribe</b></h5>
+                            <div class="footer-newsletter">
+                                <p class="Footer_Subscribe_text">Enter your email address below to subscribe to our news letter and latest promotions and discounts.</p>
+                                <form class="news-letter-form">
+                                    <input type="email" name="news-email" id="news-email" placeholder="Your email address">
+                                    <input type="submit" value="Subscribe" class="Subscribebutton">
+                                </form>
+                                <ul class="d-flex mt-3">
+                                    <li class="mr-2"><b class="FollowUs_text">Follow Us:</b></li>
+                                    <li class="mr-2" style="font-size: 12px; font-weight: bold;display: flex;align-items: center;">
+                                        <a href="#">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="mr-2" style=" font-size: 12px; font-weight: bold;display: flex;align-items: center;">
+                                        <a href="#">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- widget end -->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+
+            <div class="row footer-bottom">
+                <div class="col-md-6 col-sm-6 text-sm-left text-center footet-last-bottom">
+                    <span class="copy-right-text">Copyright © 2024 All Rights Reserved</span>
+                    <span class="copy-right-text">|</span>
+                    <a href="/home/PrivacyPolicy"><span class="copy-right-text">Privacy Policy</span></a>
+                    <span class="copy-right-text">|</span>
+                    <a href="/home/ADAPolicy"><span class="copy-right-text">ADA Policy</span></a>
+                    <span class="copy-right-text">|</span>
+                    <a href="/home/CopyrigtPolicy"><span class="copy-right-text">Copyright Policy</span></a>
+                </div>
+                <div class="col-md-6 col-sm-6 footet-last-bottom">
+                    <span class="developed-by" style="margin: 0 0 0 auto;">Developed By <span class="highlight">WBN Marketing of Florida</span></span>
+                </div>
+            </div>
+
+        </div><!-- footer-bottom end -->
+    </footer>
+
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.sticky.js"></script>
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

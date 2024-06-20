@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="~/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="~/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="~/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="~/plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="~/plugins/summernote/summernote-bs4.min.css">
+    
+    <link rel="stylesheet" href="~/css/newadmincss.css">
+    <!-- Include jQuery and DataTables JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+    
+
+    <style>
+        [class*=sidebar-dark-] {
+             /* background-color: #01518F !important;  */
+            /* background-color: #3f96e1 !important; */
+        }
+
+        .nav-link {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .nav-sidebar > .nav-item .nav-icon {
+            width: 1rem !important;
+        }
+
+
+        .sidebar .nav-sidebar > .nav-item.menu-open > .nav-link,
+        .sidebar .nav-sidebar > .nav-item > .nav-link,
+        .sidebar .nav-sidebar > .nav-item > .nav-link {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+            color: #fff !important;
+        }
+
+        .sidebar .nav-sidebar > .nav-item.menu-open > .nav-link,
+        .sidebar .nav-sidebar > .nav-item:hover > .nav-link,
+        .sidebar .nav-sidebar > .nav-item:focus > .nav-link {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+            color: #fff !important;
+        }
+        .nav_csss a{
+            color: #000 !important;
+        }
+
+        .brand-link {
+            line-height: 1.5;
+            padding: .8125rem .5rem;
+            white-space: nowrap;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            
+        }
+
+        .user-nav-link {
+            background-color: #989833;
+            border-radius: 100px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-header {
+            border-bottom: 0px solid #dee2e6 !important;
+            z-index: 1034;
+            margin-top: 10px;
+            margin-right: 50px;
+        }
+
+        .wbm{
+            position:relative;
+            left: 20%;
+        }
+        .highlight {
+            color: #741c99;
+        }
+        .developed-by {
+            font-size: 14px; /* Example font size */
+        }
+
+
+        .custom-menu {
+            /* margin-right: auto; */
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+            .custom-menu a {
+                color: white; /* White color */
+                font-size: 24px; /* Larger font size */
+            }
+/* 
+        .submenu {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+
+        .submenu-item {
+            padding: 0.5rem 0;
+        }
+
+        .nav-item > a {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .nav-item > a .fa-chevron-right {
+                transition: transform 0.3s ease;
+            }
+
+            .nav-item > a.collapsed .fa-chevron-right {
+                transform: rotate(0deg);
+            }
+
+            .nav-item > a:not(.collapsed) .fa-chevron-right {
+                transform: rotate(90deg);
+            } */
+
+        .submenu {
+            transition: .3s;
+            opacity: 0;
+            visibility: hidden;
+            display: block;
+            height: 0px !important;
+            width: 100%;
+        }
+
+        .nav-item:hover .submenu {
+            display: block;
+            position: relative;
+            /* left: 20%; */
+            /* top: 0; */
+            height: fit-content !important;
+            width: 100%;
+            z-index: 1000; /* Ensure it appears above other content */
+            opacity: 1;
+            transition: .5s;
+            visibility: visible;
+        }
+        .advance_search_lbl{
+            padding-left: 10px;
+            display: flex;
+        }
+        .advance_search_lbl label a{
+            color: #000;
+        }
+        .advance_search_lbl label a:hover{
+            text-decoration: underline;
+        }
+        .img-fluid{
+            height: 90px;;
+            transition: .0s;
+        }
+         
+        .layout-fixed .main-sidebar{
+            transition: .0s;
+        }
+        .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand).sidebar-focused, .sidebar-mini.sidebar-collapse .main-sidebar:not(.sidebar-no-expand):hover{
+
+        }
+        
+        .img-fluid{
+            background-image: url("/Images/ProjectDog_LOGO.png");
+            /* Other background properties */
+            background-size: contain; /* Adjust to your needs */
+            background-position: center; /* Adjust to your needs */
+            width: 100%;
+            background-repeat: no-repeat;
+        }
+        .sidebar-mini.sidebar-collapse.layout-fixed .brand-link {
+            height: 100%;
+            max-height: 145px;
+            display: flex !important;
+            align-items: center !important;
+        }
+        .collapsed_nav {
+           width: 58px; /* Collapsed width */
+        }
+        .collapsed_nav .brand-link{
+            width: auto;
+        }
+        
+        .collapsed_nav .img-fluid{
+            background-image: url("/Images/Dogonly.png");
+        }
+        .collapsed_nav .dash_nav_link, .collapsed_nav .submenu{
+            display: none;
+        }
+        .collapsed_nav .nav-item:hover .submenu{
+            display: none;
+        }
+        .dash_nav_link{
+            padding-left: 8px;
+        }
+        #content-wrapper {
+        transition: margin-left 0.3s ease; /* Add transition for smooth animation */
+        }
+
+        #content-wrapper.collapsed {
+        margin-left: 58px !important; /* Add margin-left when sidebar is collapsed */
+        }
+        .collapsed_nav .dropdown-toggle::after{
+            display: none;
+        }
+
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuToggle = document.getElementById('nav-links');
+        var mainSidebar = document.getElementById('main-sidebar');
+        var contentWrapper = document.getElementById('content-wrapper');
+        var navLink = document.querySelector('.nav-link');
+        menuToggle.addEventListener('click', function(event) {
+            event.preventDefault();
+            mainSidebar.classList.toggle('collapsed_nav');
+            contentWrapper.classList.toggle('collapsed');
+            if (navLink.classList.contains('dropdown-toggle')) {
+             // Remove .dropdown-toggle when sidebar is collapsed, add it back when expanded
+                navLink.classList.toggle('dropdown-toggle');
+            }
+            else {
+            // Add .dropdown-toggle when sidebar is expanded, remove it when collapsed
+                navLink.classList.toggle('dropdown-toggle');
+            }
+        });
+            
+    });
+    
+
+
+    </script>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">          
+            <img class="animation__shake" src="~/Images/LOGO.png" height="60" width="60">
+        </div>
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+           @*  <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+              
+            </ul> *@
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <div class="navbar-search-block d-block" style="z-index: -1;">
+                        <form class="form-inline d-flex justify-content-center alight-item-center mt-2">
+                            <div class="input-group" style="width: 50%!important;">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                                <div class="advance_search_lbl">
+                                    <label><a href="/Dashboard/projectLeads">Advanced search</a></label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+
+                <!-- Messages Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="@Url.Action("Settings","Dashboard")">
+                        <i class="fas fa-cog"></i>
+                    </a>
+                 
+                </li>
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown user-nav-link">
+                    <a class="nav-link" data-toggle="dropdown" href="@Url.Action("Settings","Dashboard")">
+                        <i class="far fa-user text-white"></i>
+                        
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">15 Notifications</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i> 4 new messages
+                            <span class="float-right text-muted text-sm">3 mins</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-users mr-2"></i> 8 friend requests
+                            <span class="float-right text-muted text-sm">12 hours</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-file mr-2"></i> 3 new reports
+                            <span class="float-right text-muted text-sm">2 days</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-file mr-2"></i> 3 new reports
+                            <span class="float-right text-muted text-sm">2 days</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="@Url.Action("Login","Home")" class="dropdown-item">
+                             Logout
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="@Url.Action("Myinfo","Dashboard")" class="dropdown-item">
+                            My Information
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                    </div>
+                </li>
+               
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary " id="main-sidebar" style="background-color: #f9f9f9;">
+
+            <div class="custom-menu">
+                <a class="nav-link" id="nav-links" href="#" role="button"><i style="color: black;" class="fas fa-bars"></i></a>
+            </div>
+            
+            <!-- Brand Logo -->
+            <a href="@Url.Action("Index","Home")"  class="brand-link">
+                <div class="img-fluid" style="margin-top: 40px;" style="background-image: url(/Images/ProjectDog_LOGO.png);"></div>
+            </a>
+
+           
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+              
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+
+                    <ul class="nav nav-pills nav-sidebar flex-column nav_csss" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                             with font-awesome or any other icon font library -->
+                      @*   <li class="nav-item">
+                            <a  class="nav-link">
+                                <p> <span href="@Url.Action("Calander","Dashboard")">Home</span></p>
+                                <i href="#submenu1" class="fas fa-chevron-right" data-toggle="collapse" data-target="#submenu1"></i>
+                            </a>
+                                
+                            <ul class="submenu collapse" id="submenu1">
+                                <li class="submenu-item">
+                                    <a class="nav-link">My Information</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a class="nav-link">Logout</a>
+                                </li>                               
+                            </ul>
+                          
+                        </li> *@
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-item" style="border: 1px solid #EBEBEB!important" href="@Url.Action("","Dashboard")" id="navbarDropdown" role="button">
+                                <i class="fa fa-palette"></i><span class="dash_nav_link">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-item" style="border: 1px solid #EBEBEB!important" href="/Dashboard/projectManagment" id="navbarDropdown" role="button">
+                                <i class="fa fa-toolbox"></i><span class="dash_nav_link">Toolbox</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-item" style="border: 1px solid #EBEBEB!important" href="/Dashboard/Calander" id="navbarDropdown" role="button">
+                                <i class="fa fa-calendar" aria-hidden="true"></i><span class="dash_nav_link">Calendar </span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown" style="display: none;">
+                            <a class="nav-link dropdown-item" style="border: 1px solid #EBEBEB!important" href="/Dashboard/projectCenetral" id="navbarDropdown" role="button">
+                                Project Central
+                            </a>
+                        </li>
+
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="border: 1px solid #EBEBEB!important" href="#" id="navbarDropdown" role="button">
+                                <i class="fa fa-building"></i><span class="dash_nav_link">Company</span>
+                            </a>
+                            <ul class="dropdown-menu submenu">
+                                <li><a class="dropdown-item" href="/Dashboard/faqs">FAQs</a></li>
+                                <li><a class="dropdown-item" href="/Dashboard/downloads">Downloads</a></li>
+                                <li><a class="dropdown-item" href="/Dashboard/employment">Employment</a></li>
+                                <li><a class="dropdown-item" href="/Dashboard/ContactUs">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        </li><li class="nav-item dropdown">
+                            <a class="nav-link dropdown-item" style="border: 1px solid #EBEBEB!important" href="/Dashboard/NewProject" id="navbarDropdown" role="button">
+                                <i class="fa fa-file"></i><span class="dash_nav_link">New Project </span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" style="border: 1px solid #EBEBEB!important" href="/Dashboard/Settings" id="navbarDropdown" role="button">
+                                <i class="fa fa-cog" aria-hidden="true"></i><span class="dash_nav_link">Setting</span>
+                            </a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-item" style="border: 1px solid #EBEBEB!important" href="/Dashboard/Adminpage" id="navbarDropdown" role="button">
+                                <i class="fa fa-user"></i><span class="dash_nav_link">Admin</span> 
+                            </a>
+                        </li>
+
+                       @*  
+
+                        <li class="nav-item">
+                            <a href="#submenu3" class="nav-link" data-toggle="collapse" data-target="#submenu3">
+                                <p>Company</p>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <ul class="submenu collapse" id="submenu3">
+                                <li class="submenu-item">
+                                    <a href="/Dashboard/faqs" class="nav-link">FAQs</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="/Dashboard/downloads" class="nav-link">Downloads</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="/Dashboard/employment" class="nav-link">Employment</a>
+                                </li>
+                                <li class="submenu-item">
+                                    <a href="/home/ContactUs" class="nav-link">Contact Us</a>
+                                </li>
+                            </ul>
+                        </li>
+                        *@
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <div class="content-wrapper" id="content-wrapper" style="background-color:#ffff!important;">
+            
+            <section class="content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </section>
+          
+        </div>
+
+
+
+        <div class="content-wrapperr" style="background-color: #FFF; margin-left: 250px; border-top: 1px solid #EBEBEB; margin-top: 50px;">
+            <section class="content" >
+                <footer b-gq3ilgsxj4="" class="container-fluid px-5" style="color: #000;">
+                    <div b-gq3ilgsxj4="" class="row" style="padding: 13px 16px">
+                        <div b-gq3ilgsxj4="" class="col-md-8 col-sm-6" style="display: flex; align-items: center; font-size: 13px; column-gap: 20px;">
+                            <span b-gq3ilgsxj4="" class="copy-right-text">Copyright © 2024 All Rights Reserved</span>
+                            <span b-gq3ilgsxj4="" class="copy-right-text">|</span>
+                            <span b-gq3ilgsxj4="" class="copy-right-text">Privacy Policy</span>
+                            <span b-gq3ilgsxj4="" class="copy-right-text">|</span>
+                            <span b-gq3ilgsxj4="" class="copy-right-text">ADA Policy</span>
+                            <span b-gq3ilgsxj4="" class="copy-right-text">|</span>
+                            <span b-gq3ilgsxj4="" class="copy-right-text">Copyright Policy</span>
+                        </div>
+                        <div b-gq3ilgsxj4="" class="col-md-4" style="text-align: right;">
+                            <span b-gq3ilgsxj4="" class="developed-by">Developed By <span b-gq3ilgsxj4="" class="highlight">WBN Marketing of Florida</span></span>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </div>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="~/plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="~/plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="~/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="~/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="~/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="~/plugins/moment/moment.min.js"></script>
+    <script src="~/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="~/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="~/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="~/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/dist/js/adminlte.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>
+
+
